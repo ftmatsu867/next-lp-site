@@ -7,7 +7,7 @@ const Section2 = () => {
   return (
     <section className={styles.container}>
       <h2 className={styles.sectionTitle}>Game Lineup</h2>
-      <h3 className={styles.subTitle}>today's sales ranking</h3>
+      <h3 className={styles.subTitle}>todays sales ranking</h3>
       <ul className={styles.itemArea}>
         {itemData.map((item) => {
           return (
