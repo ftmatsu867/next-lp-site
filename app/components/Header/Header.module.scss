@@ -1,0 +1,39 @@
+@use "@/app/responsive";
+
+.header {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    color: white;
+
+    .pageTitle {
+        font-size: 1.2rem;
+        text-shadow: 2px 2px 2px black;
+        cursor: pointer;
+    }
+
+    .toggleArea {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        filter: drop-shadow(2px 2px 2px black);
+        cursor: pointer;
+    }
+    @include responsive.max{
+        padding: 0 20px;
+        .pageTitle{
+            font-size: 1rem;
+        }
+        .toggleArea{
+            width: 15px;
+            height: 15px;
+        }
+    }
+}

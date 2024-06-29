@@ -1,0 +1,90 @@
+@use "@/app/responsive";
+
+.container{
+    margin-bottom: 50px;
+    .sectionTitle{
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .subTitle{
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .itemArea{
+        padding: 0 150px;
+        display: flex;
+        justify-content: space-between;
+        .item{
+            width: 30%;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid black;
+            box-shadow: 4px 4px 4px rgba($color: black, $alpha: 0.5);
+            transition: transform 0.2s;
+            &:hover{
+                transform: translateY(-5px);
+            }
+            .imageArea{
+                position: relative;
+                width: 100%;
+                height: 200px;
+                margin-bottom: 15px;
+            }
+            .gameTitle{
+                margin-bottom: 5px;
+                font-weight: 600;
+            }
+            .gameDescription{
+                text-align: center;
+                display: block;
+                margin-bottom: 10px;
+                font-size: 0.9rem;
+                padding: 0 10px;
+            }
+            .shopButton{
+                display: block;
+                color: white;
+                background-color: blue;
+                margin-bottom: 5px;
+                padding: 8px 14px;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+                transition: all 0.2s;
+                &:hover{
+                    background-color: rgba($color: blue, $alpha: 0.7);
+                }
+            }
+        }
+    }
+    @include responsive.max{
+        .sectionTitle{
+            font-size: 1rem;
+        }
+        .subTitle{
+            font-size: 0.9rem;
+        }
+        .itemArea{
+            padding: 0 50px;
+            flex-direction: column;
+            align-items: center;
+            .item{
+                width: 100%;
+                margin-bottom: 10px;
+                .gameTitle{
+                    font-size: 0.9rem;
+                }
+                .gameDescription{
+                    font-size: 0.8rem;
+                }
+                .shopButton{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}

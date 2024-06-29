@@ -1,0 +1,45 @@
+@use "@/app/responsive";
+
+.container{
+    height: 100vh;
+    background-image: url("/background-images/castel.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    margin-bottom: 50px;
+    .mainArea{
+        position: absolute;
+        top: 60%;
+        left: 15%;
+        color: white;
+        text-shadow: 4px 4px 4px black;
+        .title{
+            font-size:2.5rem ;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .subTitle{
+            display: block;
+            font-size: 2rem;
+            text-align: right;
+        }
+    }
+
+    @include responsive.max{
+        .mainArea{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            .title{
+                font-size:1.2rem ;
+                text-align: center;
+            }
+            .subTitle{
+                font-size: 1rem;
+                text-align: center;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,27 @@
+.footer{
+    height: 25vh;
+    background-color: rgb(51, 45, 45);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20%;
+    color: white;
+    .coopName{
+        font-size: 0.9rem;
+        text-shadow: 2px 2px 2px black;
+    }
+    .anotherArea{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+        .anotherContainer{
+            display: flex;
+            flex-direction: column;
+            & *{
+                font-size: 0.8rem;
+                text-shadow: 2px 2px 2px black;
+            }
+        }
+    }
+}

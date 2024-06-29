@@ -1,0 +1,69 @@
+@use "@/app/responsive";
+
+.toggle{
+    position: fixed;
+    top: 50%;
+    right: -15%;
+    transform: translateY(-50%);
+    padding: 30px;
+    width: 15%;
+    background-color: black;
+    border-radius: 10px 0 0 10px;
+    z-index: 100;
+    transition: all 0.2s;
+    .ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 30px;
+        & *{
+            color: white;
+            list-style: none;
+        }
+    }
+    @include responsive.max{
+        width: 25%;
+        right: -25%;
+        .ul{
+            & *{
+                font-size: 0.7rem;
+            }
+        }
+    }
+}
+.openToggle{
+    position: fixed;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    padding: 30px;
+    width: 15%;
+    background-color: black;
+    border-radius: 10px 0 0 10px;
+    z-index: 100;
+    transition: all 0.2s;
+    .ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 30px;
+        & *{
+            color: white;
+            list-style: none;
+        }
+    }
+    @include responsive.max{
+        width: 25%;
+        .ul{
+            & *{
+                font-size: 0.7rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,87 @@
+@use "@/app/responsive";
+
+.container{
+    height: 100vh;
+    background-image: url("/background-images/cloud.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    margin-bottom: 50px;
+    .rightArea{
+        position: absolute;
+        top: 15%;
+        right: 10%;
+        width: 400px;
+        color: white;
+        .rightTitle{
+            font-size: 2.5rem;
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        .rightContent{
+            font-size: 1.5rem;
+            display: block;
+            text-align: right;
+        }
+    }
+    .leftArea{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        bottom: 15%;
+        left: 10%;
+        width: 400px;
+        color: white;
+        .leftContent{
+            font-size: 1.5rem;
+            text-align: right;
+            margin-bottom: 15px;
+        }
+        .detail{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            transition: all 0.2s;
+            cursor: pointer;
+            &:hover{
+                transform: translateY(-5px);
+            }
+            .arrow{
+                width: 20px;
+                height: 20px;
+                margin-left: 5px;
+            }
+        }
+    }
+    @include responsive.max{
+        .rightArea{
+            width: 250px;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            .rightTitle{
+                font-size: 1.2rem;
+                text-align: center;
+            }
+            .rightContent{
+                font-size: 1rem;
+                text-align: center;
+            }
+        }
+        .leftArea{
+            width: 250px;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            .leftContent{
+                font-size: 1rem;
+                text-align: center;
+            }
+            .detail{
+                justify-content: center;
+            }
+        }
+    }
+}
